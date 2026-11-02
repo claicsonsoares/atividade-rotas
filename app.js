@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3030;
 
-// Estilo CSS padrão compartilhado para manter o visual limpo
+// Estilo CSS 
 const estilosCSS = `
   <style>
     body {
@@ -34,7 +34,7 @@ const estilosCSS = `
   </style>
 `;
 
-// 1. Página Inicial - Rota /
+//  Rota /
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -68,7 +68,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-// 2. Rotas das Empresas
+// Rota Empresas
 
 // Rota /marvel
 app.get('/marvel', (req, res) => {
@@ -126,7 +126,7 @@ app.get('/dc', (req, res) => {
   `);
 });
 
-// 3. Rota com dois parâmetros obrigatórios (/personagem/:empresa/:nome)
+
 app.get('/personagem/:empresa/:nome', (req, res) => {
   const { empresa, nome } = req.params;
 
